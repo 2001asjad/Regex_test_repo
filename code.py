@@ -8,7 +8,8 @@ if os.path.isfile('./data/IssueContentQuote/result.txt') :
 def store_on_fs(data, file_name):
     ##Store data in file named `file_name`
     with open(file_name, "a") as f:
-        f.write(str(data))
+        for i in range(0,len(data)):
+            f.write(str(data[i])+'\n')
 
 
 
@@ -29,9 +30,8 @@ def regexify(s):
     test_names = []
 
     jenkins_links = new_links + adoptium_jenkins_links
-    test_names = test_cases_names
-
-
+    test_names = "test_names"+" "+ "=" + " "+ "["+", ".join(test_cases_names)+ "]"
+    print(test_names)
 
     return jenkins_links, test_names
 
