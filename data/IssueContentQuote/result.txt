@@ -1,1 +1,2 @@
-([], ['jdk_util_0_FAILED', 'jdk_nio_0_FAILED'])
+[]
+test_names = [jdk_util_0_FAILED, jdk_nio_0_FAILED]
